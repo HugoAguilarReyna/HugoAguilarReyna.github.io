@@ -1,0 +1,67 @@
+<style>
+    /* ... (Resto del código CSS sin cambios) ... */
+
+    /* ------------------------------------------------------------------ */
+    /* --- RESUMEN DE MÉTRICAS (KPIs) --- */
+    /* ------------------------------------------------------------------ */
+    #kpi-summary {
+        margin: 0; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; /* Mantiene dos columnas iguales */
+        gap: 10px; 
+        padding: 10px;
+        background-color: #ffffff; 
+        border: 1px solid #c8c8c8; 
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+        
+        align-content: space-evenly; 
+        justify-items: center;
+    }
+
+    /* Restauramos la altura y diseño de las tarjetas (kpi-card) */
+    .kpi-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        
+        border: 1px solid #dcdcdc;
+        border-radius: 6px;
+        background-color: #fdfdfd;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        transition: all 0.2s ease-in-out;
+        
+        height: 90px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    /* 💥 SOLUCIÓN FINAL: Aseguramos que el tercer elemento (INGRESO PROMEDIO) 
+       ocupe las dos columnas si aún no lo hace (aunque parece que ya lo hace). */
+    #kpi-summary .kpi-card:nth-child(3) {
+        grid-column: 1 / 3; /* Ocupa el ancho completo (las dos columnas) */
+        height: 90px;
+    }
+    
+    /* 🚀 Modificación Clave: Forzamos que el cuarto elemento (PRODUCTO TOP) 
+       también ocupe las dos columnas, dándole el mismo ancho que el anterior. */
+    #kpi-summary .kpi-card:nth-child(4) {
+        grid-column: 1 / 3; /* Ocupa el ancho completo (las dos columnas) */
+        height: 90px; 
+    }
+    
+    /* 🔥 CORRECCIÓN CLAVE: Mayor especificidad y tamaño aumentado (16px) */
+    #kpi-summary .kpi-label { 
+        font-size: 16px !important; 
+        font-weight: 600; 
+        color: #666; 
+        text-align: center; 
+    }
+    
+    .kpi-value { font-size: 24px; font-weight: 700; text-align: center; }
+    .kpi-top .kpi-value { font-size: 18px; } 
+    
+    /* ... (Resto del código CSS sin cambios) ... */
+</style>
