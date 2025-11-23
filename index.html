@@ -18,7 +18,7 @@
             background-color: #ffffff; 
         }
         
-        /* 💥 Reducir el tamaño del logo (40px) */
+        /* Reducir el tamaño del logo (40px) */
         #logo {
             height: 40px; 
             width: auto; 
@@ -38,7 +38,7 @@
             border-radius: 5px;
         }
         
-        /* 🔥 NUEVA CLASE: Altura fija para la fila superior */
+        /* Altura fija para la fila superior */
         .h-graph-lg {
             height: 360px; /* Altura de referencia */
             box-sizing: border-box; 
@@ -97,7 +97,7 @@
             height: 100px;
         }
         
-        /* 🔥 CORRECCIÓN APLICADA: Aumento del tamaño de letra de las etiquetas KPI y mayor especificidad */
+        /* Aumento del tamaño de letra de las etiquetas KPI y mayor especificidad */
         #kpi-summary .kpi-label { 
             font-size: 16px !important; 
             font-weight: 600; 
@@ -125,7 +125,7 @@
             padding: 10px;
         }
         
-        /* 🔥 CORRECCIÓN CLAVE: El SVG del Donut debe tomar el 100% del ancho del contenedor */
+        /* El SVG del Donut debe tomar el 100% del ancho del contenedor */
         #donut-chart-area svg {
             width: 100%; 
             height: 100%; /* Asegura que la altura también se expanda en la columna */
@@ -153,9 +153,9 @@
     </nav>
 
     <div class="container">
-        <!-- <h1 class="mt-4 mb-3">Análisis Multidimensional de Ventas</h1> -->
         
-        <button id="update-btn" class="btn btn-primary my-3">Actualizar Gráficos</button>
+        <!-- <button id="update-btn" class="btn btn-primary my-3">Actualizar Gráficos</button> -->
+         <button id="update-button" class="btn btn-primary my-3">Actualizar Datos</button>
         
         <div class="row align-items-stretch"> 
             <div class="col-lg-6 col-md-12 mb-3">
@@ -175,7 +175,12 @@
                 <div id="chart-area"></div>
             </div>
         </div>
-        
+        <div class="row">
+    <div class="col-12 mb-4">
+        <h2>Ventas por Mes y Producto (Barras Agrupadas)</h2>
+        <div id="bar-chart-area"></div> 
+    </div>
+</div>
         <div class="row">
             <div class="col-12 mb-4">
                 <h2>Ventas por Producto</h2>
@@ -190,6 +195,8 @@
     
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
